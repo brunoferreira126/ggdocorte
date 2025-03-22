@@ -1,0 +1,863 @@
+/* RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* HEADER FIXO */
+/* =======================
+   🎨 ESTILO DO HEADER
+========================= */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Ajuste de espaçamento para evitar sobreposição do header */
+#home {
+    padding-top: calc(100px + var(--header-height)); /* Usa um cálculo dinâmico */
+}
+
+
+
+/* Container principal do menu */
+.menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Centralizada */
+.logo {
+    text-align: center;
+}
+
+.logo-img {
+    width: 70px;
+}
+
+/* Botão WhatsApp fixo à direita */
+.whatsapp-icon {
+    font-size: 24px;
+    color: #F2B705;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+}
+
+/* =======================
+   📱 MENU HAMBÚRGUER 
+========================= */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Menu de Navegação Oculto por padrão */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 10px 0;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Quando o menu está ativo */
+.nav-menu.active {
+    display: flex;
+}
+
+/* =======================
+   📱 RESPONSIVIDADE
+========================= */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        justify-content: center;
+        background: transparent;
+        padding: 0;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-menu ul li {
+        margin: 0;
+    }
+
+    .whatsapp-icon {
+        position: absolute;
+        right: 20px;
+        font-size: 28px;
+    }
+}
+
+
+/* SEÇÃO CAPA */
+#home {
+    background: url('imagens/fundo-barbearia.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 10%;
+    text-align: left;
+    position: relative;
+}
+
+/* CONTAINER PRINCIPAL */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* TEXTO PRINCIPAL */
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #F2B705; /* Cor amarela de destaque */
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* IMAGEM NO LUGAR DO VÍDEO */
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito inicial: invisível e levemente deslocado */
+.hero-text, .hero-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Efeito ativado ao carregar */
+.hero-visible .hero-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-visible .hero-image {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* SEÇÃO BENEFÍCIOS */
+.hero-benefits {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.benefit {
+    width: 30%;
+}
+
+.benefit i {
+    font-size: 70px; /* Aumentei o tamanho do ícone */
+    color: #F2B705; /* Cor amarela */
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    font-size: 1.2em;
+    color: #F2B705;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+/* Efeito inicial: invisível e levemente deslocado */
+.benefit {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Efeito ativado quando o usuário rola a página */
+.benefit-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* SEÇÕES GERAIS */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* SEÇÃO SOBRE */
+
+#about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 90vh;
+    background: url('imagens/fachada.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.about-content {
+    position: relative;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Título destacado */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #F2B705;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Destaques no texto */
+.about-content p span {
+    color: #F2B705;
+    font-weight: bold;
+}
+
+/* Botão estilizado */
+.cta-button {
+    display: inline-block;
+    background: #F2B705;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background: #d39d04;
+    color: #fff;
+}
+
+
+/* SEÇÃO SERVIÇOS */
+
+#services {
+    text-align: center;
+    padding: 60px 20px;
+    background: black;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service-item {
+    background: #F2B705; /* Cor dourada */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000; /* Fonte preta */
+}
+
+.service-item h3 {
+    color: #000; /* Títulos pretos */
+    font-weight: bold;
+}
+
+.service-item p {
+    color: #000; /* Texto preto */
+}
+
+.service-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Efeito inicial: invisível e levemente deslocado */
+.service-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Efeito ativado quando o usuário rola a página */
+.service-item-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SEÇÃO PRODUTOS - CARROSSEL */
+#products {
+    text-align: center;
+    padding: 80px 20px;
+    background: black; /* Preto para manter identidade visual */
+    color: #F2B705; /* Dourado para textos */
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #F2B705; /* Dourado para títulos */
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #F2B705; /* Borda dourada para destacar os produtos */
+}
+
+/* Botões do Carrossel */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F2B705; /* Botões dourados */
+    color: #111; /* Ícones pretos */
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: #d99c05; /* Efeito hover dourado mais escuro */
+}
+
+
+/* SEÇÃO CURSOS */
+#courses {
+    background: #111;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #F2B705;
+    margin-bottom: 10px;
+}
+
+.course-subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+/* Layout Principal */
+.course-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Imagem do Instrutor */
+.course-image {
+    text-align: center;
+}
+
+.course-image img {
+    width: 250px;
+    border-radius: 10px;
+    border: 3px solid #F2B705;
+}
+
+.instructor-name {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #F2B705;
+    font-weight: bold;
+}
+
+/* Informações do Curso */
+.course-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+.course-info h3 {
+    font-size: 1.8rem;
+    color: #F2B705;
+    margin-bottom: 20px;
+}
+
+.course-benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.course-benefits-list li {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    color: #fff;
+}
+
+/* Botão de Inscrição */
+.btn {
+    display: inline-block;
+    background-color: #F2B705;
+    color: #111;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #d99c05;
+    transform: scale(1.1);
+}
+
+/* Efeito inicial: invisível e levemente deslocado */
+#courses {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Ativado quando o usuário rola até a seção */
+#courses.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação para os itens da lista de benefícios */
+.course-benefits-list li {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Classe ativada quando a seção entra na tela */
+.course-benefits-list li.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efeito de brilho nos cartões */
+.course-image img, .course-info h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-image img:hover, .course-info h3:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(242, 183, 5, 0.8);
+}
+
+
+/* LOCALIZAÇÃO */
+#location iframe {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 10px;
+}
+/* Efeito inicial: invisível e deslocado para baixo */
+#location {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Ativado quando o usuário rola até a seção */
+#location.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de crescimento no mapa */
+#location iframe {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(242, 183, 5, 0.3);
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
+/* Quando a seção estiver visível, o mapa ganha destaque */
+#location.visible iframe {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(242, 183, 5, 0.5);
+}
+
+
+/* REDES SOCIAIS */
+/* Estilização da seção Redes Sociais */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Ajusta os links verticalmente */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilização dos botões sociais */
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    width: 250px;
+    border-radius: 50px;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito hover - animação de deslizamento */
+.social-icon:hover {
+    transform: scale(1.05) translateX(5px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Ícones maiores */
+.social-icon i {
+    font-size: 28px;
+}
+
+/* Estilos específicos de cada rede */
+.instagram {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.tiktok {
+    background: linear-gradient(45deg, #ff0050, #000000, #00f2ea);
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+/* Efeito especial de notificação para o WhatsApp */
+@keyframes vibrate {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
+
+.whatsapp:hover {
+    animation: vibrate 0.3s ease infinite;
+}
+
+/* Efeito inicial: invisível e deslocado para baixo */
+#contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Quando a seção estiver visível */
+#contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de brilho ao passar o mouse */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    width: 250px;
+    border-radius: 50px;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.social-icon:hover {
+    transform: scale(1.08);
+    animation: glow 0.8s infinite alternate;
+}
+
+/* Ícones maiores */
+.social-icon i {
+    font-size: 30px;
+}
+
+/* Efeito especial para o WhatsApp */
+@keyframes vibrate {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-3deg); }
+}
+
+.whatsapp:hover {
+    animation: vibrate 0.3s ease infinite, glow 0.8s infinite alternate;
+}
+
+/* =======================
+   📱 Responsividade Geral
+========================= */
+
+/* ✅ Ajustes para Telas Menores (Tablets e Celulares Grandes) */
+@media (max-width: 1024px) {
+    /* Ajustando a seção hero */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+
+    /* Ajuste para Benefícios */
+    .hero-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste para Cursos */
+    .course-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-info {
+        max-width: 100%;
+    }
+
+    /* Serviços */
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Produtos */
+    .carousel-item img {
+        width: 90%;
+    }
+}
+
+/* ✅ Ajustes para Telas Pequenas (Celulares) */
+@media (max-width: 768px) {
+    /* Ajustando o Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta {
+        margin-top: 10px;
+    }
+
+    /* Ajustando textos */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para Serviços */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste para Produtos */
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    /* Redes Sociais */
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ✅ Ajustes para Telas Muito Pequenas (Menores de 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .service-item img {
+        width: 80px;
+    }
+
+    .social-icon {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .social-icon i {
+        font-size: 24px;
+    }
+}
