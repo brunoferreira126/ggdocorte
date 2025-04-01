@@ -446,7 +446,6 @@ section {
     background: #d99c05; /* Efeito hover dourado mais escuro */
 }
 
-
 /* SEÇÃO CURSOS */
 #courses {
     background: #111;
@@ -519,6 +518,90 @@ section {
     color: #fff;
 }
 
+/* SEÇÃO DE VALORES */
+/* SEÇÃO DE VALORES */
+.course-pricing {
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 80px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.course-pricing h3 {
+    font-size: 2rem;
+    color: #F2B705;
+    margin-bottom: 20px;
+}
+
+/* Layout da Seção de Valores */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilização dos Blocos */
+.pricing-box {
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo do PIX */
+.pricing-cash {
+    background: #4CAF50;
+    color: #fff;
+    border: 3px solid #3c9141;
+    position: relative;
+}
+
+/* Estilo do Cartão */
+.pricing-card {
+    background: #007BFF;
+    color: #fff;
+    border: 3px solid #0056b3;
+}
+
+/* Texto dentro dos blocos */
+.price {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.price-desc {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Rótulo "Melhor Opção" */
+.best-option {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFD700;
+    color: #111;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Nota Final */
+.payment-note {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 20px;
+}
+
 /* Botão de Inscrição */
 .btn {
     display: inline-block;
@@ -537,6 +620,27 @@ section {
     background-color: #d99c05;
     transform: scale(1.1);
 }
+
+
+/* Botão de Inscrição */
+.btn {
+    display: inline-block;
+    background-color: #F2B705;
+    color: #111;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #d99c05;
+    transform: scale(1.1);
+}
+
 
 /* Efeito inicial: invisível e levemente deslocado */
 #courses {
