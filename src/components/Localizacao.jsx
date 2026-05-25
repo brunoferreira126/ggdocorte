@@ -11,9 +11,8 @@ const INSTAGRAM    = 'barberggdocorte'
 // ENDEREÇO — troque pelo endereço completo real da barbearia
 const ENDERECO     = 'Caponga, Cascavel — CE'
 const HORARIOS = [
-  { dia: 'Segunda a Sexta', hora: '08h às 20h' },
-  { dia: 'Sábado',          hora: '08h às 18h' },
-  { dia: 'Domingo',         hora: 'Fechado'    },
+  { dia: 'Segunda a Sábado', hora: '07h às 18h' },
+  { dia: 'Domingo',          hora: '07h às 12h' },
 ]
 
 // ============================================================
@@ -118,7 +117,7 @@ export default function Localizacao() {
                     {HORARIOS.map((h) => (
                       <div key={h.dia} className="flex items-center justify-between">
                         <span className="font-sans text-gray-400 text-sm font-light">{h.dia}</span>
-                        <span className={`font-sans text-sm font-medium ${h.hora === 'Fechado' ? 'text-gray-600' : 'text-white'}`}>
+                        <span className="font-sans text-sm font-medium text-white">
                           {h.hora}
                         </span>
                       </div>

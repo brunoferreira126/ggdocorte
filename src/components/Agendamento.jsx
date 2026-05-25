@@ -7,7 +7,7 @@ import { BsWhatsapp } from 'react-icons/bs'
 // ============================================================
 const LINK_AGENDAMENTO  = 'https://cashbarber.com.br/ggdocorte'   // Sistema de agendamento
 const WHATSAPP_SUPORTE  = '5585981803845'
-const HORARIO           = 'Segunda a Sábado · 08h às 20h'
+const HORARIO           = 'Seg a Sáb · 07h às 18h | Dom · 07h às 12h'
 const ENDERECO_CURTO    = 'Caponga, Cascavel — CE'
 
 export default function Agendamento() {

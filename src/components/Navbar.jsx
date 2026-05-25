@@ -16,7 +16,7 @@ const navLinks = [
 // ============================================================
 const WHATSAPP     = '5585981803845'
 const INSTAGRAM    = 'barberggdocorte'
-const ENDERECO     = 'Caponga/Cascavel, CE'
+const ENDERECO     = 'Caponga, Cascavel — CE'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -33,7 +33,7 @@ export default function Navbar() {
       {/* Barra superior — localização + redes sociais */}
       <div className="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-sm border-b border-white/5 px-6 md:px-12 lg:px-24 py-2 items-center justify-between">
         <a
-          href="https://maps.google.com/?q=GG+do+Corte+Fortaleza"
+          href="https://maps.google.com/?q=Barbearia+GG+do+Corte+Caponga+Cascavel+CE"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors duration-300"
@@ -41,7 +41,7 @@ export default function Navbar() {
           <FiMapPin size={11} className="text-red-600" />
           {/* ENDEREÇO — troque pelo endereço completo da barbearia */}
           <span className="font-sans text-[10px] tracking-widest uppercase">
-            {ENDERECO} — Rua Exemplo, 123
+            {ENDERECO}
           </span>
         </a>
 
@@ -170,7 +170,7 @@ export default function Navbar() {
             {/* Logo no menu mobile */}
             <div className="absolute top-6 left-8 flex items-center gap-3">
               <img
-                src="public/images/logo.png"
+                src="/images/logo.png"
                 alt="GG do Corte"
                 className="w-10 h-10 object-contain"
                 onError={(e) => { e.target.style.display = 'none' }}
