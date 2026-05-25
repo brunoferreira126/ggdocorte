@@ -1,7 +1,7 @@
 [build]
-  command = "npx --yes vite build"
+  command = "npm run build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NPM_FLAGS = "--include=dev"
