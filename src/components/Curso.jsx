@@ -78,7 +78,7 @@ export default function Curso() {
         </div>
 
         {/* =======================================================
-            FOTO DA TURMA — arquivo: public/images/turmas do curso.PNG
+            FOTO DA TURMA — arquivo: public/images/turmas-curso.png
             Aparece em destaque acima do conteúdo
         ======================================================= */}
         <motion.div
@@ -89,7 +89,7 @@ export default function Curso() {
           className="relative mb-16 overflow-hidden"
         >
           <img
-            src="/images/turmas do curso.PNG"
+            src="/images/turmas-curso.png"
             alt="Turma formada pelo Curso de Barbeiro GG do Corte — Caponga, Cascavel CE"
             className="w-full h-72 md:h-96 object-cover object-top"
           />

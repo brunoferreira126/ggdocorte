@@ -35,11 +35,11 @@ export default function Hero() {
 
       {/* =======================================================
           FOTO DE FUNDO DO GG
-          Arquivo: public/images/gg do corte.png
+          Arquivo: public/images/gg-foto.jpg
       ======================================================= */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/gg do corte.png"
+          src="/images/gg-foto.jpg"
           alt="GG do Corte"
           className="w-full h-full object-cover object-top opacity-20"
         />
@@ -49,11 +49,11 @@ export default function Hero() {
 
       {/* =======================================================
           FOTO DO GG — lado direito (destaque)
-          Arquivo: public/images/gg do corte.png
+          Arquivo: public/images/gg-foto.jpg
       ======================================================= */}
       <div className="absolute right-0 bottom-0 top-0 w-[55%] z-0 hidden lg:block">
         <img
-          src="/images/gg do corte.png"
+          src="/images/gg-foto.jpg"
           alt="GG Barbeiro"
           className="w-full h-full object-cover object-center"
           style={{

@@ -9,28 +9,28 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 const transformacoes = [
   {
     id: 1,
-    // Arquivo: public/images/antes degrade.JPG
-    antes:   '/images/antes degrade.JPG',
-    // Arquivo: public/images/depois degrade.JPG
-    depois:  '/images/depois degrade.JPG',
+    // Arquivo: public/images/antes-degrade.jpg
+    antes:   '/images/antes-degrade.jpg',
+    // Arquivo: public/images/depois-degrade.jpg
+    depois:  '/images/depois-degrade.jpg',
     servico: 'Degradê',
     valor:   'R$ 30,00',
   },
   {
     id: 2,
-    // Arquivo: public/images/antes combo.png
-    antes:   '/images/antes combo.png',
-    // Arquivo: public/images/depois combo.jpg
-    depois:  '/images/depois combo.jpg',
+    // Arquivo: public/images/antes-combo.png
+    antes:   '/images/antes-combo.png',
+    // Arquivo: public/images/depois-combo.jpg
+    depois:  '/images/depois-combo.jpg',
     servico: 'Combo Completo',
     valor:   'R$ 55,00',
   },
   {
     id: 3,
-    // Arquivo: public/images/antes platinado.png
-    antes:   '/images/antes platinado.png',
-    // Arquivo: public/images/depois platinado.png
-    depois:  '/images/depois platinado.png',
+    // Arquivo: public/images/antes-platinado.png
+    antes:   '/images/antes-platinado.png',
+    // Arquivo: public/images/depois-platinado.png
+    depois:  '/images/depois-platinado.png',
     servico: 'Platinado',
     valor:   'R$ 100,00',
   },

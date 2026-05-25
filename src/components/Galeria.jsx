@@ -22,22 +22,22 @@ const fotos = [
   },
   {
     id: 3,
-    // Arquivo: public/images/depois combo.jpg
-    src:   '/images/depois combo.jpg',
+    // Arquivo: public/images/depois-combo.jpg
+    src:   '/images/depois-combo.jpg',
     label: 'Combo Completo',
     span:  '',
   },
   {
     id: 4,
-    // Arquivo: public/images/depois degrade.JPG
-    src:   '/images/depois degrade.JPG',
+    // Arquivo: public/images/depois-degrade.jpg
+    src:   '/images/depois-degrade.jpg',
     label: 'Degradê',
     span:  '',
   },
   {
     id: 5,
-    // Arquivo: public/images/depois platinado.png
-    src:   '/images/depois platinado.png',
+    // Arquivo: public/images/depois-platinado.png
+    src:   '/images/depois-platinado.png',
     label: 'Platinado',
     span:  '',
   },
